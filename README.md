@@ -3,6 +3,9 @@
 - [Museum-Path-Optimization](#museum-path-optimization)
   - [Group Members](#group-members)
   - [Description](#description)
+    - [Data Input](#data-input)
+    - [Branch and Bound](#branch-and-bound)
+    - [Ant Colony Optimization](#ant-colony-optimization)
     - [Simulated Annealing](#simulated-annealing)
   - [Project Tree](#project-tree)
 
@@ -18,12 +21,51 @@ This repository represents the work done as part of the course project for AE - 
 
 Instructions on running specific algorithms are mentioned below:
 
+*Note: All of the commands mentioned below support CLI. Use the argument `-h` for help in each case.*
+
+### Data Input
+To generate and store the cost matrices of all the test cases, do the following from root:
+```
+$ python code/data_input/base_input.py
+```
+
+### Branch and Bound
+To run the branch and bound algorithm, do the following from root:
+```
+$ python code/branch_and_bound/time_opti.py
+```
+Run the following to get all the command-line arguments:
+```
+$ python code/branch_and_bound/time_opti.py -h
+```
+
+### Ant Colony Optimization
+To run the ant colony optimization algorithm, do the following from root:
+```
+$ python code\ant_colony\ant_colony_code.py
+```
+
 ### Simulated Annealing
 
-To run the simple simulated annealing algorithm, do the following:
+**Simple Algorithm**
 
+To run the simple simulated annealing algorithm, do the following from root:
 ```
-$ python code\simulated_annealing\simple_simulated_annealing.py
+$ python code/simulated_annealing/simple_simulated_annealing.py
+```
+
+**Complex Algorithm**
+
+To run the complex simulated annealing algorithm, do the following from root:
+```
+$ python code/simulated_annealing/complex_simulated_annealing.py
+```
+
+**Automator**
+
+To run the automator file, do the following from root:
+```
+$ python code\simulated_annealing\automate.py
 ```
 
 ## Project Tree
@@ -31,13 +73,13 @@ $ python code\simulated_annealing\simple_simulated_annealing.py
 .
 ├───code
 │   ├───ant_colony
-│   ├───base
 │   ├───branch_and_bound
+│   ├───data_input
 │   ├───genetic
 │   └───simulated_annealing
 ├───data
+│   ├───cost_matrices
+│   └───Symmetric_TSPLIB
 ├───output
-│   └───figures
-│       └───simulated_annealing
 └───reports
 ```
